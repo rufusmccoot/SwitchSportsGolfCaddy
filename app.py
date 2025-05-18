@@ -6,13 +6,22 @@ app = Flask(__name__)
 
 # Define the 18 holes with their image paths and labels
 holes = [
-    {'id': i+1, 'img': f'holes/C{i+1}.png', 'label': f'Classic {i+1}'} for i in range(9)
+    # Resort 1-9 (holes 1-9)
+    {'id': i+1, 'img': f'holes/R{i+1}.png', 'label': f'Resort {i+1}'} for i in range(9)
 ] + [
-    {'id': i+10, 'img': f'holes/R{i+1}.png', 'label': f'Resort {i+1}'} for i in range(9)
+    # Classic 10-18 (holes 10-18)
+    {'id': i+10, 'img': f'holes/C{i+10}.png', 'label': f'Classic {i+10}'} for i in range(9)
 ]
 
 # Note file mapping: {hole_id: note_file}
-hole_code_map = {**{h['id']: f'C{i+1}' for i, h in enumerate(holes[:9])}, **{h['id']: f'R{i+1}' for i, h in enumerate(holes[9:])}}
+hole_code_map = {}
+for h in holes:
+    if h['label'].startswith('Resort'):
+        num = int(h['label'].split()[-1])
+        hole_code_map[h['id']] = f'R{num}'
+    elif h['label'].startswith('Classic'):
+        num = int(h['label'].split()[-1])
+        hole_code_map[h['id']] = f'C{num}'
 
 # Load all hole notes from YAML
 NOTES_PATH = os.path.join(app.static_folder, 'notes', 'all_holes.yaml')

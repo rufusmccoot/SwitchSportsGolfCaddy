@@ -10,8 +10,7 @@
             line-height: 1.6;
             padding: 0;
             margin: 0;
-            background: #23282b;
-            color: #f1f4f8;
+            background: #f5f5f5;
         }
         .hole-img {
             width: 96vw;
@@ -23,7 +22,6 @@
             display: block;
             margin: 2vw auto 24px auto;
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            background: #23282b;
         }
         .notes-sections {
             max-width: 98vw;
@@ -32,10 +30,10 @@
         }
         details {
             margin-bottom: 24px;
-            border: 1.5px solid #2e3a3f;
+            border: 1.5px solid #bbb;
             border-radius: 10px;
-            background: #26343e;
-            box-shadow: 0 1px 10px #0004;
+            background: #fff;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
         }
         summary {
             font-weight: bold;
@@ -43,68 +41,35 @@
             padding: 16px 12px;
             cursor: pointer;
             outline: none;
-            color: #4CAF50;
-            background: #26343e;
-            border-radius: 8px;
-            box-shadow: 0 1px 6px #0003;
         }
         .section-content {
             padding: 16px 18px 12px 18px;
             white-space: pre-line;
             font-size: 1.08em;
-            background: #26343e;
-            color: #f1f4f8;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px #0002;
         }
         .section-content img {
             max-width: 100%;
             margin-bottom: 10px;
             border-radius: 8px;
-            border: 1.5px solid #2e3a3f;
+            border: 1.5px solid #ccc;
             display: block;
-            background: #23282b;
         }
         .back-link {
             text-align: center;
             margin: 32px 0 0 0;
         }
         .back-link a {
-            text-decoration: none;
-        
-            background: #26343e;
-            padding: 14px 34px;
-            border-radius: 12px;
-            border: 3px solid #4CAF50;
-            font-weight: bold;
-            display: inline-block;
-            font-size: 1.25em;
-            color: #4CAF50 !important;
-            box-shadow: 0 2px 16px #000b, 0 0 0 2px #2e3a3f;
-            letter-spacing: 0.04em;
-            text-shadow: 0 2px 8px #000;
-            transition: background 0.15s, border 0.15s, color 0.15s;
-        }
-        .back-link a:hover, .back-link a:active {
-            text-decoration: none;
-            background: #4CAF50;
-            color: #26343e !important;
-            border-color: #4CAF50;
-        
-            color: #4CAF50 !important;
-        
             font-size: 1.18em;
             color: #357a38;
             text-decoration: none;
-            padding: 20px 44px;
+            padding: 10px 22px;
             border-radius: 6px;
-            background: #4CAF50;
+            background: #e7f7ea;
             border: 1px solid #b2dfbc;
             display: inline-block;
         }
         .back-link a:hover {
-            background: #4CAF50;
-            color: #26343e;
+            background: #d0f5dd;
         }
         @media (max-width: 600px) {
             .hole-img {
@@ -125,8 +90,7 @@
     </style>
 </head>
 <body>
-    <a href="/" style="color: #4CAF50; text-decoration: none; font-weight: bold;">&larr; Back to Menu</a>
-    <h1 style="text-align:center; color:#4CAF50; letter-spacing:0.04em; text-shadow:0 2px 12px #000;">{{ hole['label'] }}</h1>
+    <h1 style="text-align:center; font-size: 1.5em;">{{ hole['label'] }}</h1>
     <div style="text-align:center;">
         <img class="hole-img" src="{{ url_for('static', filename=hole['img']) }}" alt="{{ hole['label'] }}">
     </div>
@@ -150,6 +114,9 @@
         {% endif %}
     </div>
     <div class="back-link">
+        <a href="{{ url_for('index') }}">Back to All Holes</a>
+    </div>
+    <div style="text-align:center; margin-top:20px;">
         <a href="{{ url_for('index') }}">Back to All Holes</a>
     </div>
 </body>

@@ -1,5 +1,5 @@
 holes:
-  C1:
+  C10:
     sections:
       - title: "First shot"
         text: "Full send. Avoid bunker on the left."
@@ -8,13 +8,13 @@ holes:
         text: "Probably 9 iron. Roll up."
         images: []
 
-  C2:
+  C11:
     sections:
       - title: "First shot"
         text: "No wind, 7 iron 3 2/3 dots clears bunker and stops near side of green"
         images: []
 
-  C3:
+  C12:
     sections:
       - title: "First shot"
         text: "If wind sucks, play dogleg. No wind, full power driver is island. 17 mph headwind is max or you'll undershoot."
@@ -23,13 +23,13 @@ holes:
         text: "If you're on the island, 3 iron with 3.8 dots aimed into the left side of near bunker. If you played dogleg, use spoon."
         images: []
 
-  C4:
+  C13:
     sections:
       - title: "First shot"
         text: "Easy hole. 7 iron 3 2/3 dots is middle of green. You get a bit more wind effect than you're used to."
         images: []
 
-  C5:
+  C14:
     sections:
       - title: "First shot - Pin to left"
         text: "Play the dogleg, clubbed down to spoon."
@@ -43,7 +43,8 @@ holes:
       - title: "Second shot - Pin to right"
         text: "Try to land between bunker and green. Backspin if you can.k"
         images: []
-  C6:
+
+  C15:
     sections:
       - title: "First shot"
         text: "You know what to do."
@@ -51,17 +52,20 @@ holes:
       - title: "Second shot"
         text: "Clear the bunker. The green is helpfully slanted if you go a bit long."
         images: []
-  C7:
+
+  C16:
     sections:
       - title: "First shot"
         text: "If there's no wind pushing to the right, you can shortcut. Put aimstick right on the edge of that near tree and full send drive."
-        images: ["notes/C7-1.png"]
-  C8:
+        images: ["notes/C16-1.png"]
+
+  C17:
     sections:
       - title: "First shot"
         text: "If no head/tailwind, driver just below yellow dot:"
-        images: ["notes/C8-1.png"]
-  C9:
+        images: ["notes/C17-1.png"]
+
+  C18:
     sections:
       - title: "First shot"
         text: "As long as you don't have more than 6 mph headwind, play the the left island."
@@ -69,6 +73,7 @@ holes:
       - title: "Second shot"
         text: "Wind will have more effect than usual. You're likely to need a low iron which will have a lot of forward roll so land shy of green, middle of that fairway bib shape."
         images: []
+
   R1:
     sections:
       - title: "First shot"
@@ -77,6 +82,7 @@ holes:
       - title: "Second shot"
         text: "Roll up to the hole"
         images: []
+
   R2:
     sections:
       - title: "First shot"
@@ -127,6 +133,7 @@ holes:
       - title: "Second shot - pin on right"
         text: "Make it through both sets of trees, land in the rough and roll on."
         images: ["notes/R6-2R.png"]
+
   R7:
     sections:
       - title: "First shot"
